@@ -13,6 +13,7 @@
 *.userprefs
 
 # config files
+*.csproj
 *.json
 
 # Build results
