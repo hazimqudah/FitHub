@@ -1,0 +1,8 @@
+To: hazim.qudah@mavs.uta.edu
+Subject: Verify your email
+Message: Click <a href="http://localhost:56626/Identity/VerifyEmail/60b1128f-465b-4099-9b80-aae0185c2e4b?token=CfDJ8NaiA6%2BRfaROjzoAm3uusHXZ5%2Bni0qF0r5hI1PCB5HoamrQEJi0wje%2B%2B%2ByrUCHeMzN%2FV2WUWTQnATf8xtmREa4xE0%2By6VJpupIt5zFAO%2FpGmw6iRUSyzFNnBC%2Bc1IuDotGI%2BPO0EgL%2BVVuWogi9N96cn90vj5JgllYuC%2B5zK2PSn1xxYSbH1AJ2eCTVWefhmFEfxhCFN2sMq01%2Fol1hcYBsMPi2DXLy78kMTnfqpW1fVjm5DQN1jGEAL5PjdUInCXw%3D%3D">here</a> to verify your email
+
+To: hazim.qudah@mavs.uta.edu
+Subject: Password reset
+Message: Click <a href="http://localhost:56626/Identity/ResetPassword/60b1128f-465b-4099-9b80-aae0185c2e4b?token=CfDJ8NaiA6%2BRfaROjzoAm3uusHXK2jnKv3sEMqMcviNAUdAyRUFnQPtuNyOJzDDispFFjgE6ileyJRl2o%2FsMi6mc8RZnY4nNtNElBjE3YQRShwE9pPRJC30Bm0vOjAI5TtgmFjmdt5CZF4c3M4MgR7jh9Bd4opawQWnjyhL%2B37UotUnBFxUryvOZ3CwgUIza%2Fb2G6tShupP%2FhRUJP078of8UGwI%2FymDp0S2cr0KUWVhvI7e3xpDAENnSVIj9%2BHaqgGx3Gg%3D%3D">here</a> to reset your password
+
