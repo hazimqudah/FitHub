@@ -13,22 +13,30 @@ namespace FitHub.Data.Models.FitFile
     {
         private readonly IWorkoutRepository _workoutRepository;
         private readonly IExerciseRepository _exerciseRepository;
+        public string DateToLog;
         public CustomIdentityContext _identityContext;
 
         public IEnumerable<Workout> AllWorkoutRows { get; set; }
         public IEnumerable<Workout> WorkoutDatesForUser { get; set; }
         public IEnumerable<Workout> WorkoutsOnSelectedDateForUser { get; set; }
 
-        private ILogger<FitFileController> _logger;
+        private ILogger<HomeController> _logger;
 
-
-        public FitFileWorkoutsModel(IExerciseRepository exerciseRepository, IWorkoutRepository workoutRepository, CustomIdentityContext identityContext, ILogger<FitFileController> logger)
+        public FitFileWorkoutsModel(IExerciseRepository exerciseRepository, IWorkoutRepository workoutRepository, CustomIdentityContext identityContext, ILogger<HomeController> logger)
         {
             _identityContext = identityContext;
             _workoutRepository = workoutRepository;
             _exerciseRepository = exerciseRepository;
             _logger = logger;
         }
+
+        public FitFileWorkoutsModel(IExerciseRepository exerciseRepository, IWorkoutRepository workoutRepository, CustomIdentityContext identityContext)
+        {
+            _identityContext = identityContext;
+            _workoutRepository = workoutRepository;
+            _exerciseRepository = exerciseRepository;
+        }
+
 
         public string FindExerciseNameFromID(int ID)
         {

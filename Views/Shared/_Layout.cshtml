@@ -23,63 +23,34 @@
     </environment>
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#bob">FitHub</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+@if (User.Identity.IsAuthenticated)
+{
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#bob">FitHub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Identity">Identity</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" asp-area="" asp-controller="JavaScript" asp-action="JavaScript">JavaScript</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-controller="FitFile" asp-action="Index">FitFile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
-            </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Identity">Identity</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="FitFile" asp-action="Index">FitFile</a>
+                </li>
+            </ul>
 
-        </ul>
-
-            <div class="form-inline" style="border:red 0px solid">
-            @if (User.Identity.IsAuthenticated)
-            {
-                <div>
-                    Logged in as: <strong>@User.Identity.Name  </strong>
-                    <button class="btn btn-outline-info ml-3" onclick="logout();">Logout</button>
-                </div>
-
-            }
-            else
-            {
-                <div>
-                    <button class="btn btn-outline-info px-4" onclick="signIn();">Login</button>
-                    <button class="btn btn-outline-info px-4" onclick="register();">Register</button>
-                </div>
-            }
         </div>
-
-
-    </div>
-</nav>
+    </nav>
+}
 
 <div class="container body-content">
     @RenderBody()
-    <hr/>
-    <footer class="footer container-fluid">
-        <span class="text-muted">&copy FitHub: </span>
-    </footer>
+    <hr />
 </div>
 
 <environment include="Development">

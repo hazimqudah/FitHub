@@ -4,7 +4,10 @@ using System.Linq;
 using FitHub.Contexts;
 using FitHub.Data;
 using FitHub.Data.Models;
+using FitHub.Data.Models.FitFile;
 using FitHub.Data.Repositories;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -12,64 +15,112 @@ namespace FitHub.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly CustomIdentityContext _identityDbContext;
+        private readonly IExerciseRepository _exerciseRepository;
+        private readonly IWorkoutRepository _workoutRepository;
+        public string CurrentUserID;
         private ILogger<HomeController> _logger;
 
 
-        public HomeController(ILogger<HomeController> logger, CustomIdentityContext _identityContext)
+        public HomeController(UserManager<IdentityUser> userManager, ILogger<HomeController> logger, CustomIdentityContext _identityContext, IExerciseRepository exerciseRepository, IWorkoutRepository workoutRepository)
         {
+            _userManager = userManager;
             _identityDbContext = _identityContext;
+            _exerciseRepository = exerciseRepository;
+            _workoutRepository = workoutRepository;
             _logger = logger;
         }
 
         [HttpGet]
-        public IActionResult Database()
-        {
-            //var query = _context.Results.ToList();
-
-            //var linkedQuery = from p in _context.Results select p;
-
-            _logger.LogInformation("Database GET request yal gawwad!!!");
-            ViewBag.method = "GET";
-
-            return View();
-            //return View(_identityDbContext.Results.ToList());
-            //return View(_repository.GetAllRows().ToList());
-        }
-
-        [HttpPost]
-        public IActionResult Database(string ID, string queryColumn, string queryValue)
-        {
-            if (!String.IsNullOrEmpty(ID)) // no ID entered!
-            {
-                ViewBag.method = "POST: run query to find ID: " + ID + "!";
-                //var response = _repository.FindRowByID(Convert.ToInt32(ID));
-
-                //ViewBag.method = "fN: " + response.FirstName + " lN: " + response.LastName + " comment: " + response.Comment + "!";
-            }
-
-            //ViewBag.method = "POST: queryColumn was " + queryColumn + " and queryValue was " + queryValue + "!";
-            return View();
-            //return View(_repository.GetAllRows().ToList());
-        }
-
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult About()
+        [Authorize]
+        [HttpGet]
+        public IActionResult Log()
         {
-            ViewData["Message"] = "Your application description page.";
+            FitFileWorkoutsModel model = new FitFileWorkoutsModel(_exerciseRepository, _workoutRepository, _identityDbContext, _logger);
+            CurrentUserID = _userManager.GetUserId(HttpContext.User);
 
-            return View();
+            model.GetAllWorkoutRows();
+            model.FindUniqueWorkoutDatesForUser(CurrentUserID);
+
+            return View(model);
         }
 
-        public IActionResult Contact()
+        [Authorize]
+        [HttpPost]
+        public IActionResult Log(string DateOfWorkout)
         {
-            ViewData["Message"] = "Your contact page.";
+            FitFileWorkoutsModel model = new FitFileWorkoutsModel(_exerciseRepository, _workoutRepository, _identityDbContext, _logger);
 
-            return View();
+            model.DateToLog = DateOfWorkout;
+
+            CurrentUserID = _userManager.GetUserId(HttpContext.User);
+
+            //model.GetAllWorkoutRows();
+            //model.FindUniqueWorkoutDatesForUser(CurrentUserID);
+            //  model.FindWorkoutsOnSelectedDateForUser(CurrentUserID, SelectedWorkoutDateForUser);
+
+            return View(model);
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult Exercises()
+        {
+            _logger.LogInformation("Database GET request yal gawwad!!!");
+            ViewBag.method = "GET";
+
+            FitFileExercisesModel tempModel = new FitFileExercisesModel(_exerciseRepository);
+
+            foreach (var c in tempModel.Exercises)
+            {
+                _logger.LogInformation("Exercise logged: " + c.ExName);
+            }
+
+            return View(new FitFileExercisesModel(_exerciseRepository));
+        }
+
+        [HttpPost]
+        public IActionResult Exercises(string exerciseName)
+        {
+            _logger.LogInformation("trying to add: " + exerciseName);
+
+            _exerciseRepository.AddExercise(exerciseName);
+
+            return View(new FitFileExercisesModel(_exerciseRepository));
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult History()
+        {
+            FitFileWorkoutsModel model = new FitFileWorkoutsModel(_exerciseRepository, _workoutRepository, _identityDbContext, _logger);
+            CurrentUserID = _userManager.GetUserId(HttpContext.User);
+
+            model.GetAllWorkoutRows();
+            model.FindUniqueWorkoutDatesForUser(CurrentUserID);
+
+            return View(model);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult History(string SelectedWorkoutDateForUser)
+        {
+            FitFileWorkoutsModel model = new FitFileWorkoutsModel(_exerciseRepository, _workoutRepository, _identityDbContext, _logger);
+            CurrentUserID = _userManager.GetUserId(HttpContext.User);
+
+            model.GetAllWorkoutRows();
+            model.FindUniqueWorkoutDatesForUser(CurrentUserID);
+            model.FindWorkoutsOnSelectedDateForUser(CurrentUserID, SelectedWorkoutDateForUser);
+
+            return View(model);
         }
 
         public IActionResult Error()

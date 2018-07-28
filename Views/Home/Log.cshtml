@@ -1,0 +1,34 @@
+﻿@model FitFileWorkoutsModel
+@inject IExerciseRepository _exerciseRepository
+
+@{
+    ViewData["Title"] = "Log Workout";
+}
+
+<button type="submit" class="btn btn-info btn-block" onclick="Home()">Back</button>
+
+<br />
+<div class="container">
+    <h1 class="h4 mb-3 font-weight-normal text-center">Log Workout</h1>
+    <br />
+    <div class="alert alert-info">
+        <strong>Select the date of your workout.</strong>
+    </div>
+
+    <form action="/Home/Log" method="post">
+        <div class="form-group">
+            <input type="date" name='DateOfWorkout' placeholder='Date' class="form-control" />
+            <br />
+            <button class="btn btn-lg btn-info btn-block" type="submit">Submit</button>
+        </div>
+    </form>
+
+    @if (Model.DateToLog != null)
+    {
+        <div class="alert alert-info">
+            <strong>@Model.DateToLog</strong>
+        </div>
+    }
+
+</div>
+

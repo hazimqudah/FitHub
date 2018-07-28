@@ -9,12 +9,16 @@ $(document).ready(function () {
 
     });
 
-function myJSFunction() {
-    alert('Hi!');
+function NotImplemented() {
+    alert('Feature not yet implemented.');
 }
 
 function logout() {
     location.href = "/Account/Logout";
+}
+
+function Home() {
+    location.href = "/Home/Index";
 }
 
 function signIn() {

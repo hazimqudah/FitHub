@@ -1,0 +1,43 @@
+﻿@model FitFileExercisesModel
+
+@{
+    ViewData["Title"] = "Exercises";
+}
+
+<button type="submit" class="btn btn-info btn-block" onclick="Home()">Back</button>
+
+<br />
+
+<div class="container">
+    <h1 class="h4 mb-3 font-weight-normal text-center">Exercise List</h1>
+
+    <div class="form-group">
+        <select class="form-control" id="sel1">
+            @foreach (var p in Model.Exercises)
+            {
+                <option> @p.ExName </option>
+            }
+        </select>
+    </div>
+
+    <br />
+</div>
+<div class="container">
+    <h1 class="h4 mb-3 font-weight-normal text-center">Add Exercise to Directory</h1>
+
+    <form action="/FitFile/Exercises" method="post">
+        <div class="form-group">
+            <input type="text" autocomplete="off" class="form-control" name="exerciseName" placeholder="Exercise Name" />
+        </div>
+
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+
+    </form>
+</div>
+
+
+
+
+

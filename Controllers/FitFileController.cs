@@ -36,7 +36,7 @@ namespace FitHub.Controllers
         [HttpGet]
         public IActionResult Workouts()
         {
-            FitFileWorkoutsModel model = new FitFileWorkoutsModel(_exerciseRepository, _workoutRepository, _identityContext, _logger);
+            FitFileWorkoutsModel model = new FitFileWorkoutsModel(_exerciseRepository, _workoutRepository, _identityContext);
             CurrentUserID = _userManager.GetUserId(HttpContext.User);
 
             model.GetAllWorkoutRows();
@@ -49,7 +49,7 @@ namespace FitHub.Controllers
         [HttpPost]
         public IActionResult Workouts(string SelectedWorkoutDateForUser)
         {
-            FitFileWorkoutsModel model = new FitFileWorkoutsModel(_exerciseRepository, _workoutRepository, _identityContext, _logger);
+            FitFileWorkoutsModel model = new FitFileWorkoutsModel(_exerciseRepository, _workoutRepository, _identityContext);
             CurrentUserID = _userManager.GetUserId(HttpContext.User);
 
             model.GetAllWorkoutRows();
@@ -57,8 +57,6 @@ namespace FitHub.Controllers
             model.FindWorkoutsOnSelectedDateForUser(CurrentUserID, SelectedWorkoutDateForUser);
 
             return View(model);
-
-
         }
 
         [Authorize]

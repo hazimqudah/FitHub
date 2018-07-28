@@ -1,0 +1,62 @@
+﻿@model FitFileWorkoutsModel
+@inject IExerciseRepository _exerciseRepository
+
+@{
+    ViewData["Title"] = "Workout History";
+}
+
+<button type="submit" class="btn btn-info btn-block" onclick="Home()">Back</button>
+
+<br />
+
+<div class="container">
+
+    <h1 class="h4 mb-3 font-weight-normal text-center">Workout History</h1>
+
+    <form action="/Home/History" method="post">
+        <div class="form-group">
+            <label for="sel1">Select a date:</label>
+            <select class="form-control" id="SelectedWorkoutDateForUser" name="SelectedWorkoutDateForUser" onchange="this.form.submit()">
+                @foreach (var p in Model.WorkoutDatesForUser)
+                {
+                    <option> @p.WoDate.ToString("MM/dd/yyyy") </option>
+                }
+            </select>
+        </div>
+    </form>
+
+    @if (Model.WorkoutsOnSelectedDateForUser != null)
+    {
+        <h1 class="h4 mb-3 font-weight-normal text-center">Workout Details</h1>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model.WorkoutsOnSelectedDateForUser)
+                {
+                    <tr>
+                        <td>@p.WoDate.ToString("MM-dd")</td>
+                        <td>@Model.FindExerciseNameFromID(p.WoExID)</td>
+                        <td>@p.WoSetCount</td>
+                        <td>@p.WoRepCount</td>
+                        <td>@p.WoWeightUsed</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    }
+    else
+    {
+
+    }
+</div>
