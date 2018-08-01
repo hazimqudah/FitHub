@@ -10,6 +10,7 @@ namespace FitHub.Data.Repositories
     public interface IWorkoutRepository
     {
         IEnumerable<Workout> GetAllRows();
+        IEnumerable<Workout> GetAllWorkoutsForUserID(string currentUserId);
         IEnumerable<Workout> GetCurrentUserWorkoutDates(string currentUserId);
         IEnumerable<Workout> GetWorkoutsForCurrentUserOnGivenDate(string currentUserId, string workoutDate);
         void LogWorkoutSet(List<LogExerciseModel> workoutSet);

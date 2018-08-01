@@ -36,6 +36,11 @@ namespace FitHub.Data.Repositories
             _identityContext.SaveChanges();
         }
 
+        public IEnumerable<Workout> GetAllWorkoutsForUserID(string currentUserId)
+        {
+            return _identityContext.Workouts.Where(p => p.User.Id == currentUserId);
+        }
+
         public IEnumerable<Workout> GetAllRows()
         {
             return _identityContext.Workouts.ToList();

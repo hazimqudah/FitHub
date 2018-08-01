@@ -36,6 +36,11 @@ namespace FitHub.Data.Repositories
             return _identityContext.Exercises.Where(e => e.ExName == exerciseName).FirstOrDefault();
         }
 
+        public Exercise FindExerciseNameByID(int exerciseID)
+        {
+            return _identityContext.Exercises.Where(e => e.ExID == exerciseID).FirstOrDefault();
+        }
+
         public bool SaveAll()
         {
             return _identityContext.SaveChanges() > 0;

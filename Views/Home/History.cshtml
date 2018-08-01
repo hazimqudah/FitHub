@@ -15,8 +15,9 @@
 
     <form action="/Home/History" method="post">
         <div class="form-group">
-            <label for="sel1">Select a date:</label>
+            <label for="sel1">View Workout History:</label>
             <select class="form-control" id="SelectedWorkoutDateForUser" name="SelectedWorkoutDateForUser" onchange="this.form.submit()">
+                <option disabled selected>Select a date</option>
                 @foreach (var p in Model.WorkoutDatesForUser)
                 {
                     <option> @p.WoDate.ToString("MM/dd/yyyy") </option>
@@ -27,37 +28,28 @@
 
     @if (Model.WorkoutsOnSelectedDateForUser != null)
     {
-        <h1 class="h4 mb-3 font-weight-normal text-center">Workout Details</h1>
 
-        <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Name</th>
-                    <th>Sets</th>
-                    <th>Reps</th>
-                    <th>Weight</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (Model.WorkoutsOnSelectedDateForUser != null)
-                {
-
-                    @foreach (Workout p in Model.WorkoutsOnSelectedDateForUser)
-                    {
+                <table class="table">
+                    <thead>
                         <tr>
-                            <td>@p.WoDate.ToString("MM-dd")</td>
-                            <td>@Model.FindExerciseNameFromID(p.WoExID)</td>
-                            <td>@p.WoSetCount</td>
-                            <td>@p.WoRepCount</td>
-                            <td>@p.WoWeightUsed</td>
-
+                            <th scope="col">Exercise Name</th>
+                            <th scope="col">Sets</th>
+                            <th scope="col">Repititions</th>
+                            <th scope="col">Weight</th>
+                            <th scope="col">Date</th>
                         </tr>
+                    </thead>
+
+                    @foreach (var x in Model.WorkoutsOnSelectedDateForUser)
+                    {
+                        <tbody>
+                        <td>@_exerciseRepository.FindExerciseNameByID(x.WoExID).ExName</td>
+                        <td>@x.WoSetCount</td>
+                        <td>@x.WoRepCount</td>
+                        <td>@x.WoWeightUsed</td>
+                        <td>@x.WoDate.ToString("MM/dd/yyyy")</td>
+                        </tbody>
                     }
-
-                }
-            </tbody>
-        </table>
-
+                </table>
     }
-</div>
+            </div>

@@ -56,7 +56,7 @@ namespace FitHub.Data.Models.FitFile
 
         public void FindWorkoutsOnSelectedDateForUser(string CurrentUserID, string SelectedWorkoutDateForUser)
         {
-            WorkoutsOnSelectedDateForUser = _workoutRepository.GetWorkoutsForCurrentUserOnGivenDate(CurrentUserID, SelectedWorkoutDateForUser);
+            _workoutRepository.GetWorkoutsForCurrentUserOnGivenDate(CurrentUserID, SelectedWorkoutDateForUser);
 
             _logger.LogInformation("finding workout on date " + SelectedWorkoutDateForUser + " for user id: " + CurrentUserID);
             //WorkoutsOnSelectedDateForUser = null;

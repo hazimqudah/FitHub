@@ -150,7 +150,10 @@ namespace FitHub.Controllers
 
             model.GetAllWorkoutRows();
             model.FindUniqueWorkoutDatesForUser(CurrentUserID);
-            model.FindWorkoutsOnSelectedDateForUser(CurrentUserID, SelectedWorkoutDateForUser);
+
+            model.WorkoutsOnSelectedDateForUser = _workoutRepository.GetWorkoutsForCurrentUserOnGivenDate(CurrentUserID, SelectedWorkoutDateForUser);
+            
+            //model.FindWorkoutsOnSelectedDateForUser(CurrentUserID, SelectedWorkoutDateForUser);
 
             return View(model);
         }
@@ -158,8 +161,22 @@ namespace FitHub.Controllers
         [HttpGet]
         public IActionResult Debug()
         {
-            //ViewData["name"] = "hello";
-            return View();
+            CurrentUserID = _userManager.GetUserId(HttpContext.User);
+            string WorkoutForUserOnDate = "07-13-2018";
+
+            ViewData["UserID"] = CurrentUserID;
+            ViewData["NumberOfWorkoutsForUserID"] = _workoutRepository.GetAllWorkoutsForUserID(CurrentUserID).Count();
+
+            var model = new DebugViewModel();
+
+            model.ListOfWorkoutsForUserID = _workoutRepository.GetAllWorkoutsForUserID(CurrentUserID);
+
+            //model.ListOfWorkoutsForUserIDGivenDate = model.ListOfWorkoutsForUserID.Where(w => w.WoDate.Equals(DateTime.Parse("07-30-2018")));
+            model.ListOfWorkoutsForUserIDGivenDate = _workoutRepository.GetWorkoutsForCurrentUserOnGivenDate(CurrentUserID, WorkoutForUserOnDate);
+
+            ViewData["WorkoutForUserOnDate"] = WorkoutForUserOnDate;
+
+            return View(model);
         }
 
         public IActionResult Error()
