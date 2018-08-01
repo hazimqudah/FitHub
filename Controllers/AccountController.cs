@@ -38,7 +38,8 @@ namespace FitHub.Controllers
             var newUser = new IdentityUser
             {
                 UserName = email,
-                Email = email
+                Email = email,
+                EmailConfirmed = true
             };
 
             var userCreationResult = await _userManager.CreateAsync(newUser, password);
