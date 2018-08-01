@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using FitHub.Contexts;
@@ -7,6 +9,7 @@ using FitHub.Data.Models;
 using FitHub.Data.Models.FitFile;
 using FitHub.Data.Repositories;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -54,13 +57,42 @@ namespace FitHub.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Log(string DateOfWorkout)
+        public IActionResult Log(IFormCollection form)
         {
+            List<String> formKeys = Request.Form.Keys.ToList();
             FitFileWorkoutsModel model = new FitFileWorkoutsModel(_exerciseRepository, _workoutRepository, _identityDbContext, _logger);
+            List<LogExerciseModel> workoutSet = new List<LogExerciseModel>();
 
-            model.DateToLog = DateOfWorkout;
-
+            string WoDate = Request.Form[formKeys[0]];
             CurrentUserID = _userManager.GetUserId(HttpContext.User);
+
+
+            for(int i = 1; i < formKeys.Count; i += 4)
+            {
+                int ex = _exerciseRepository.FindRowByID(Request.Form[formKeys[i]]).ExID;
+                string sets = Request.Form[formKeys[i + 1]];
+                string reps = Request.Form[formKeys[i + 2]];
+                string weights = Request.Form[formKeys[i + 3]];
+
+                workoutSet.Add(new LogExerciseModel
+                {
+                    WoUserID = CurrentUserID,
+                    WoDate = WoDate,
+                    WoExID = ex,
+                    WoRepCount = int.Parse(reps),
+                    WoSetCount = int.Parse(sets),
+                    WoWeightUsed = int.Parse(weights)
+                });
+
+                //finalString += "Exercise: " + ex + " Sets: " + sets + " Reps: " + reps + " Weights: " + weights + "\n";
+            }
+
+            _workoutRepository.LogWorkoutSet(workoutSet);
+
+            //string modelString = "Date: " + WoDate + " User ID: " + CurrentUserID + "\n\n";
+            //modelString += finalString;
+
+            //model.DateToLog = modelString;
 
             //model.GetAllWorkoutRows();
             //model.FindUniqueWorkoutDatesForUser(CurrentUserID);
@@ -121,6 +153,13 @@ namespace FitHub.Controllers
             model.FindWorkoutsOnSelectedDateForUser(CurrentUserID, SelectedWorkoutDateForUser);
 
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Debug()
+        {
+            //ViewData["name"] = "hello";
+            return View();
         }
 
         public IActionResult Error()

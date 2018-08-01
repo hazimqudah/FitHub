@@ -28,6 +28,7 @@ namespace FitHub.Data.Models.FitFile
             _workoutRepository = workoutRepository;
             _exerciseRepository = exerciseRepository;
             _logger = logger;
+            WorkoutsOnSelectedDateForUser = null;
         }
 
         public FitFileWorkoutsModel(IExerciseRepository exerciseRepository, IWorkoutRepository workoutRepository, CustomIdentityContext identityContext)
@@ -40,7 +41,7 @@ namespace FitHub.Data.Models.FitFile
 
         public string FindExerciseNameFromID(int ID)
         {
-            return _exerciseRepository.FindRowByID(ID).ExName;
+            return _exerciseRepository.FindRowByID(null).ExName;
         }
 
         public void GetAllWorkoutRows()

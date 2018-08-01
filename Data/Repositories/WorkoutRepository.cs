@@ -1,5 +1,6 @@
 ﻿using FitHub.Contexts;
 using FitHub.Data.Entities;
+using FitHub.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,24 @@ namespace FitHub.Data.Repositories
             _identityContext = identityContext;
         }
 
+        public void LogWorkoutSet(List<LogExerciseModel> workoutSet)
+        {
+            foreach(LogExerciseModel workoutRow in workoutSet)
+            {
+                _identityContext.Workouts.Add(new Workout()
+                {
+                    WoUserID = workoutRow.WoUserID,
+                    WoExID = workoutRow.WoExID,
+                    WoRepCount = workoutRow.WoRepCount,
+                    WoSetCount = workoutRow.WoSetCount,
+                    WoWeightUsed = workoutRow.WoWeightUsed,
+                    WoDate = DateTime.Parse(workoutRow.WoDate)
+
+                });
+            }
+
+            _identityContext.SaveChanges();
+        }
 
         public IEnumerable<Workout> GetAllRows()
         {

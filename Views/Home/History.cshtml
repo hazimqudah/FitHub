@@ -40,23 +40,24 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var p in Model.WorkoutsOnSelectedDateForUser)
+                @if (Model.WorkoutsOnSelectedDateForUser != null)
                 {
-                    <tr>
-                        <td>@p.WoDate.ToString("MM-dd")</td>
-                        <td>@Model.FindExerciseNameFromID(p.WoExID)</td>
-                        <td>@p.WoSetCount</td>
-                        <td>@p.WoRepCount</td>
-                        <td>@p.WoWeightUsed</td>
 
-                    </tr>
+                    @foreach (Workout p in Model.WorkoutsOnSelectedDateForUser)
+                    {
+                        <tr>
+                            <td>@p.WoDate.ToString("MM-dd")</td>
+                            <td>@Model.FindExerciseNameFromID(p.WoExID)</td>
+                            <td>@p.WoSetCount</td>
+                            <td>@p.WoRepCount</td>
+                            <td>@p.WoWeightUsed</td>
+
+                        </tr>
+                    }
+
                 }
             </tbody>
         </table>
-
-    }
-    else
-    {
 
     }
 </div>

@@ -30,13 +30,16 @@ function register() {
 }
 
 var i = 1;
-$("#add_row").click(function () {
-    $('#addr' + i).html("<td>" + (i + 1) + "</td><td><input name='user" + i + "' type='date' placeholder='Date' class='form-control input-md'  /></td><td><input  name='pass" + i + "' type='text' placeholder='Name'  class='form-control input-md'></td><td><input  name='ip" + i + "' type='text' placeholder='Sets'  class='form-control input-md'></td><td><input  name='country" + i + "' type='text' placeholder='Reps'  class='form-control input-md'></td><td><input  name='ipDisp" + i + "' type='text' placeholder='Weight'  class='form-control input-md'></td>");
+$("#add_log_row").click(function () {
+    $('#addr' + i).html("<div class='col-1'> <input type='text' class='form-control text-center' disabled='disabled' placeholder='" + i + "'/> </div> <div class='col-5'> <select class='form-control' id='ExName" + i + "' name='ExName" + i + "' placeholder='.col-4'></select> </div> <div class='col-2'> <input type='text' class='form-control' name='Sets" + i + "' placeholder='Sets'> </div> <div class='col-2'> <input type='text' class='form-control' name='Reps" + i + "' placeholder='Reps'> </div> <div class='col-2'> <input type='text' class='form-control' name='Weights" + i + "' placeholder='Weights'> </div>");
+    $("<div class='form-row' id=" + "addr" + (i + 1) + "></div>").insertBefore("#submit");
 
-    $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+    var $options = $("#HiddenExerciseList > select > option").clone();
+    $('#ExName' + i).append($options);
     i++;
 });
-$("#delete_row").click(function () {
+
+$("#delete_log_row").click(function () {
     if (i > 1) {
         $("#addr" + (i - 1)).html('');
         i--;

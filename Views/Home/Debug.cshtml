@@ -1,0 +1,17 @@
+﻿@model DebugViewModel
+@inject IExerciseRepository _exerciseRepository
+@inject IWorkoutRepository _workoutRepository
+
+@{
+    ViewData["Title"] = "Debug";
+}
+
+<button type="submit" class="btn btn-info btn-block" onclick="Home()">Back</button>
+
+<br />
+
+<div class="container-fluid">
+    <h1 class="h4 mb-3 font-weight-normal text-center">Debug</h1>
+
+    <strong>@ViewData["name"]</strong>
+</div>

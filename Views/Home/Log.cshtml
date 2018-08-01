@@ -10,18 +10,80 @@
 <br />
 <div class="container">
     <h1 class="h4 mb-3 font-weight-normal text-center">Log Workout</h1>
-    <br />
-    <div class="alert alert-info">
-        <strong>Select the date of your workout.</strong>
+
+    <div>
+        <div id='HiddenExerciseList' style='display:none'>
+            <select class='form-control' placeholder='.col-4'>
+                @foreach (Exercise x in _exerciseRepository.GetAllRows())
+                {
+                    <option>@x.ExName</option>
+                }
+            </select>
+        </div>
     </div>
 
-    <form action="/Home/Log" method="post">
+    <form id="logForm" action="/Home/Log" method="post">
         <div class="form-group">
-            <input type="date" name='DateOfWorkout' placeholder='Date' class="form-control" />
+            <label for="WorkoutDate">Workout Date</label>
+            <input type="date" name='DateOfWorkout' placeholder='Date' class="form-control" required />
             <br />
-            <button class="btn btn-lg btn-info btn-block" type="submit">Submit</button>
         </div>
+        <div class="form-row">
+            <div class="col-1 text-center">
+                <label for="name" class="control-label">#</label>
+            </div>
+            <div class="col-5 text-center">
+                <label for="name" class="control-label">Exercise</label>
+            </div>
+            <div class="col-2 text-center">
+                <label for="name" class="control-label">Sets</label>
+            </div>
+            <div class="col-2 text-center">
+                <label for="name" class="control-label">Reps</label>
+            </div>
+            <div class="col-2 text-center">
+                <label for="name" class="control-label">Weight</label>
+            </div>
+        </div>
+
+        <div class="form-row" id="addr0">
+            <div class="col-1">
+                <input type="text" class="form-control text-center" disabled="disabled" placeholder="0" />
+            </div>
+            <div class="col-5">
+                <select required class="form-control" name="ExName0" id="ExName0" placeholder=".col-4">
+                    @foreach (Exercise x in _exerciseRepository.GetAllRows())
+                    {
+                        <option>@x.ExName</option>
+                    }
+                </select>
+            </div>
+            <div class="col-2">
+                <input required type="text" name="Sets0" id="Sets0" class="form-control" placeholder="Sets">
+            </div>
+            <div class="col-2">
+                <input required type="text" name="Reps0" id="Reps0" class="form-control" placeholder="Reps">
+            </div>
+            <div class="col-2">
+                <input required type="text" name="Weights0" id="Weights0" class="form-control" placeholder="Weights">
+            </div>
+        </div>
+
+
+
+        <div class="form-row" id='addr1'>
+
+        </div>
+
+        <br id="submit" />
+        <button class="btn btn-lg btn-info btn-block" id="submit2" type="submit">Submit</button>
+
+        <a id="add_log_row" class="btn btn-default pull-left">Add Row</a>
+        <a id='delete_log_row' class="pull-right btn btn-default">Delete Row</a>
+
     </form>
+
+    <br />
 
     @if (Model.DateToLog != null)
     {

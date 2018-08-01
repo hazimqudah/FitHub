@@ -31,9 +31,9 @@ namespace FitHub.Data.Repositories
             return _identityContext.Exercises.ToList();
         }
 
-        public Exercise FindRowByID(int ID)
+        public Exercise FindRowByID(string exerciseName)
         {
-            return _identityContext.Exercises.Where(e => e.ExID == ID).FirstOrDefault();
+            return _identityContext.Exercises.Where(e => e.ExName == exerciseName).FirstOrDefault();
         }
 
         public bool SaveAll()

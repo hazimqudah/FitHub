@@ -84,19 +84,16 @@
                                 <th class="text-center">
                                     #
                                 </th>
-                                <th class="text-center">
-                                    Date
-                                </th>
-                                <th class="text-center">
+                                <th class="col-md-4 text-center">
                                     Name
                                 </th>
-                                <th class="text-center">
+                                <th class="col-md-2 text-center">
                                     Sets
                                 </th>
-                                <th class="text-center">
+                                <th class="col-md-2 text-center">
                                     Reps
                                 </th>
-                                <th class="text-center">
+                                <th class="col-md-2 text-center">
                                     Weight
                                 </th>
                             </tr>
@@ -106,19 +103,16 @@
                                 <td>
                                     1
                                 </td>
-                                <td>
-                                    <input type="date" name='user0' placeholder='Date' class="form-control" />
+                                <td class="col-md-6">
+                                        <select class="form-control" id="SelectedWorkoutDateForUser" name="SelectedWorkoutDateForUser" onchange="this.form.submit()">
+                                            @foreach (var p in _exerciseRepository.GetAllRows())
+                                            {
+                                                <option>@p.ExName</option>
+                                            }
+                                        </select>
                                 </td>
                                 <td>
-                                    <select class="form-control" id="SelectedWorkoutDateForUser" name="SelectedWorkoutDateForUser" onchange="this.form.submit()">
-                                        @foreach (var p in _exerciseRepository.GetAllRows())
-                                        {
-                                            <option>@p.ExName</option>
-                                        }
-                                    </select>
-                                </td>
-                                <td>
-                                    <input type="text" name='ip0' placeholder='Sets' class="form-control" />
+                                    <input type="text" name='ip0' placeholder='Sets' class="form-control input-sm" />
                                 </td>
                                 <td>
                                     <input type="text" name='country0' placeholder='Reps' class="form-control" />
@@ -126,12 +120,13 @@
                                 <td>
                                     <input type="text" name='ipDisp0' placeholder='Weight' class="form-control" />
                                 </td>
+                                </div>
                             </tr>
-                            <tr id='addr1'></tr>
+                            <tr id='addr1'>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
             <a id="add_row" class="btn btn-default pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-default">Delete Row</a>
         </div>
         <div id="menu2" class="tab-pane fade">

@@ -6,7 +6,7 @@ namespace FitHub.Data.Repositories
     public interface IExerciseRepository
     {
         IEnumerable<Exercise> GetAllRows();
-        Exercise FindRowByID(int ID);
+        Exercise FindRowByID(string exerciseName);
         void AddExercise(string exerciseName);
         bool SaveAll();
     }
