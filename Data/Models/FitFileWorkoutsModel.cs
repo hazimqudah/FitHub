@@ -1,13 +1,11 @@
-﻿
-
-using FitHub.Contexts;
+﻿using FitHub.Contexts;
 using FitHub.Controllers;
 using FitHub.Data.Entities;
 using FitHub.Data.Repositories;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 
-namespace FitHub.Data.Models.FitFile
+namespace FitHub.Data.Models
 {
     public class FitFileWorkoutsModel
     {

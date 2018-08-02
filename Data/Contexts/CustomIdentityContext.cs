@@ -7,11 +7,9 @@ namespace FitHub.Contexts
     public class CustomIdentityContext : IdentityDbContext
     {
 
-        public virtual DbSet<Result> Results { get; set; }
         public virtual DbSet<Exercise> Exercises { get; set; }
         public virtual DbSet<Workout> Workouts { get; set; }
-        //public virtual DbSet<Book> Books { get; set; }
-
+        public virtual DbSet<MuscleGroup> MuscleGroups { get; set; }
 
         public CustomIdentityContext(DbContextOptions<CustomIdentityContext> options)
             : base(options)

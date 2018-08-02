@@ -6,14 +6,14 @@ using FitHub.Data.Entities;
 using FitHub.Data.Repositories;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace FitHub.Data.Models.FitFile
+namespace FitHub.Data.Models
 {
     public class FitFileExercisesModel
     {
         private readonly IExerciseRepository _exerciseRepository;
         public IEnumerable<Exercise> Exercises { get; set; }
         public SelectListItem ExerciseList { get; set; }
-       
+
 
         public FitFileExercisesModel(IExerciseRepository exerciseRepository)
         {

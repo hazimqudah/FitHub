@@ -4,14 +4,16 @@ using FitHub.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FitHub.Migrations
 {
     [DbContext(typeof(CustomIdentityContext))]
-    partial class CustomIdentityContextModelSnapshot : ModelSnapshot
+    [Migration("20180802031202_CreateMGKey")]
+    partial class CreateMGKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

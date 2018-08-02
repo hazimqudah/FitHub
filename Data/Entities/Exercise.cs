@@ -11,5 +11,12 @@ namespace FitHub.Data.Entities
         [StringLength(50)]
         public string ExName { get; set; }
 
+        public int ExMgID { get; set; }
+
+        [ForeignKey("ExMgID")]
+        [Column("MgId")]
+        public MuscleGroup MuscleGroup { get; set; }
+
+
     }
 }

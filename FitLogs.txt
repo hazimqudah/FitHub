@@ -17832,3 +17832,1090 @@ WHERE [p].[WoUserID] = @__currentUserID_0
 2018-08-01 20:24:18.726 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
 2018-08-01 20:24:18.726 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 0.4979ms
 2018-08-01 20:24:18.726 -05:00 [INF] Request finished in 1.1083ms 200 text/html; charset=utf-8
+2018-08-01 21:57:07.489 -05:00 [INF] trying to start host
+2018-08-01 21:57:07.844 -05:00 [INF] User profile is available. Using 'C:\Users\hqudah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-01 21:57:08.242 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/  
+2018-08-01 21:57:09.093 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 21:57:09.921 -05:00 [INF] Executed DbCommand (79ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2018-08-01 21:57:10.145 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2018-08-01 21:57:10.190 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2018-08-01 21:57:10.192 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 21:57:10.253 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 21:57:10.261 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 21:57:11.930 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 21:57:12.519 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 2258.6635ms
+2018-08-01 21:57:12.533 -05:00 [INF] Request finished in 4294.6469ms 200 text/html; charset=utf-8
+2018-08-01 22:34:59.873 -05:00 [INF] trying to start host
+2018-08-01 22:35:00.159 -05:00 [INF] User profile is available. Using 'C:\Users\hqudah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-01 22:35:00.429 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/  
+2018-08-01 22:35:01.295 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:35:01.905 -05:00 [INF] Executed DbCommand (78ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2018-08-01 22:35:02.128 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2018-08-01 22:35:02.172 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2018-08-01 22:35:02.175 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:35:02.232 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:35:02.239 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:35:03.474 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 1243.3282000000002ms
+2018-08-01 22:35:03.476 -05:00 [ERR] An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Users\hqudah\source\repos\FitHub\FitHub\Views\_ViewImports.cshtml(2,26): error CS0234: The type or namespace name 'FitFile' does not exist in the namespace 'FitHub.Data.Models' (are you missing an assembly reference?)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-08-01 22:35:03.552 -05:00 [INF] Request finished in 3126.8721ms 500 text/html; charset=utf-8
+2018-08-01 22:36:02.117 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/  
+2018-08-01 22:36:02.118 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:02.119 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:02.120 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:02.760 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:36:03.222 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 1102.6471000000001ms
+2018-08-01 22:36:03.223 -05:00 [INF] Request finished in 1106.1472ms 200 text/html; charset=utf-8
+2018-08-01 22:36:06.532 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Log  
+2018-08-01 22:36:06.533 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:06.536 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:06.537 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Log (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:06.539 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:06.568 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[WoId], [w].[WoDate], [w].[WoExID], [w].[WoRepCount], [w].[WoSetCount], [w].[WoUserID], [w].[WoWeightUsed]
+FROM [Workouts] AS [w]
+2018-08-01 22:36:06.608 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[WoDate]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserID_0
+2018-08-01 22:36:06.780 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Log.cshtml.
+2018-08-01 22:36:06.790 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+2018-08-01 22:36:06.822 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+2018-08-01 22:36:06.824 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Log (FitHub) in 287.20160000000004ms
+2018-08-01 22:36:06.824 -05:00 [INF] Request finished in 291.2831ms 200 text/html; charset=utf-8
+2018-08-01 22:36:11.447 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Index  
+2018-08-01 22:36:11.447 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:11.448 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:11.448 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:11.448 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:36:11.448 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 0.66560000000000008ms
+2018-08-01 22:36:11.448 -05:00 [INF] Request finished in 1.2378ms 200 text/html; charset=utf-8
+2018-08-01 22:36:13.756 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/History  
+2018-08-01 22:36:13.756 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:13.759 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:13.759 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.History (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:13.760 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:13.761 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[WoId], [w].[WoDate], [w].[WoExID], [w].[WoRepCount], [w].[WoSetCount], [w].[WoUserID], [w].[WoWeightUsed]
+FROM [Workouts] AS [w]
+2018-08-01 22:36:13.768 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[WoDate]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserID_0
+2018-08-01 22:36:13.861 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/History.cshtml.
+2018-08-01 22:36:13.873 -05:00 [INF] Executed action FitHub.Controllers.HomeController.History (FitHub) in 113.7244ms
+2018-08-01 22:36:13.873 -05:00 [INF] Request finished in 117.3278ms 200 text/html; charset=utf-8
+2018-08-01 22:36:15.646 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/History application/x-www-form-urlencoded 41
+2018-08-01 22:36:15.647 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:15.659 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:15.692 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.History (FitHub) with arguments (["07/13/2018"]) - ModelState is "Valid"
+2018-08-01 22:36:15.693 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:15.694 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[WoId], [w].[WoDate], [w].[WoExID], [w].[WoRepCount], [w].[WoSetCount], [w].[WoUserID], [w].[WoWeightUsed]
+FROM [Workouts] AS [w]
+2018-08-01 22:36:15.694 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[WoDate]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserID_0
+2018-08-01 22:36:15.704 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__currentUserId_0='?' (Size = 450), @__Parse_1='?' (DbType = Date)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoSetCount], [p].[WoRepCount], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE ([p].[WoUserID] = @__currentUserId_0) AND ([p].[WoDate] = @__Parse_1)
+2018-08-01 22:36:15.707 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/History.cshtml.
+2018-08-01 22:36:15.714 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__exerciseID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExID] = @__exerciseID_0
+2018-08-01 22:36:15.716 -05:00 [INF] Executed action FitHub.Controllers.HomeController.History (FitHub) in 56.8382ms
+2018-08-01 22:36:15.717 -05:00 [INF] Request finished in 70.636ms 200 text/html; charset=utf-8
+2018-08-01 22:36:16.717 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/History application/x-www-form-urlencoded 41
+2018-08-01 22:36:16.718 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:16.718 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:16.720 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.History (FitHub) with arguments (["07/30/2018"]) - ModelState is "Valid"
+2018-08-01 22:36:16.720 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:16.721 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[WoId], [w].[WoDate], [w].[WoExID], [w].[WoRepCount], [w].[WoSetCount], [w].[WoUserID], [w].[WoWeightUsed]
+FROM [Workouts] AS [w]
+2018-08-01 22:36:16.722 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[WoDate]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserID_0
+2018-08-01 22:36:16.723 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__currentUserId_0='?' (Size = 450), @__Parse_1='?' (DbType = Date)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoSetCount], [p].[WoRepCount], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE ([p].[WoUserID] = @__currentUserId_0) AND ([p].[WoDate] = @__Parse_1)
+2018-08-01 22:36:16.724 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/History.cshtml.
+2018-08-01 22:36:16.725 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__exerciseID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExID] = @__exerciseID_0
+2018-08-01 22:36:16.726 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__exerciseID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExID] = @__exerciseID_0
+2018-08-01 22:36:16.726 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__exerciseID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExID] = @__exerciseID_0
+2018-08-01 22:36:16.727 -05:00 [INF] Executed action FitHub.Controllers.HomeController.History (FitHub) in 8.662700000000001ms
+2018-08-01 22:36:16.727 -05:00 [INF] Request finished in 9.1985ms 200 text/html; charset=utf-8
+2018-08-01 22:36:17.862 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/History application/x-www-form-urlencoded 41
+2018-08-01 22:36:17.862 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:17.862 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:17.862 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.History (FitHub) with arguments (["08/01/2018"]) - ModelState is "Valid"
+2018-08-01 22:36:17.863 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:17.863 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[WoId], [w].[WoDate], [w].[WoExID], [w].[WoRepCount], [w].[WoSetCount], [w].[WoUserID], [w].[WoWeightUsed]
+FROM [Workouts] AS [w]
+2018-08-01 22:36:17.864 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[WoDate]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserID_0
+2018-08-01 22:36:17.865 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserId_0='?' (Size = 450), @__Parse_1='?' (DbType = Date)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoSetCount], [p].[WoRepCount], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE ([p].[WoUserID] = @__currentUserId_0) AND ([p].[WoDate] = @__Parse_1)
+2018-08-01 22:36:17.865 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/History.cshtml.
+2018-08-01 22:36:17.865 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__exerciseID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExID] = @__exerciseID_0
+2018-08-01 22:36:17.866 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__exerciseID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExID] = @__exerciseID_0
+2018-08-01 22:36:17.866 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__exerciseID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExID] = @__exerciseID_0
+2018-08-01 22:36:17.867 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__exerciseID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExID] = @__exerciseID_0
+2018-08-01 22:36:17.867 -05:00 [INF] Executed action FitHub.Controllers.HomeController.History (FitHub) in 5.1039ms
+2018-08-01 22:36:17.867 -05:00 [INF] Request finished in 5.7275ms 200 text/html; charset=utf-8
+2018-08-01 22:36:19.151 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Index  
+2018-08-01 22:36:19.151 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:19.151 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:19.151 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:19.151 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:36:19.152 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 0.6603ms
+2018-08-01 22:36:19.152 -05:00 [INF] Request finished in 1.3983ms 200 text/html; charset=utf-8
+2018-08-01 22:36:20.631 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Debug  
+2018-08-01 22:36:20.631 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:20.633 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Debug (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:20.634 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:20.644 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoRepCount], [p].[WoSetCount], [p].[WoUserID], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserId_0
+2018-08-01 22:36:20.647 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserId_0='?' (Size = 450), @__Parse_1='?' (DbType = Date)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoSetCount], [p].[WoRepCount], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE ([p].[WoUserID] = @__currentUserId_0) AND ([p].[WoDate] = @__Parse_1)
+2018-08-01 22:36:20.741 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Debug.cshtml.
+2018-08-01 22:36:20.749 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoRepCount], [p].[WoSetCount], [p].[WoUserID], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserId_0
+2018-08-01 22:36:20.750 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Debug (FitHub) in 116.8832ms
+2018-08-01 22:36:20.750 -05:00 [INF] Request finished in 119.081ms 200 text/html; charset=utf-8
+2018-08-01 22:36:26.332 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Index  
+2018-08-01 22:36:26.333 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:26.333 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:26.333 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:26.333 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:36:26.333 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 0.4092ms
+2018-08-01 22:36:26.333 -05:00 [INF] Request finished in 1.0002ms 200 text/html; charset=utf-8
+2018-08-01 22:36:31.903 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/History  
+2018-08-01 22:36:31.903 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:31.903 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:31.903 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.History (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:31.904 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:31.904 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[WoId], [w].[WoDate], [w].[WoExID], [w].[WoRepCount], [w].[WoSetCount], [w].[WoUserID], [w].[WoWeightUsed]
+FROM [Workouts] AS [w]
+2018-08-01 22:36:31.905 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__currentUserID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[WoDate]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserID_0
+2018-08-01 22:36:31.905 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/History.cshtml.
+2018-08-01 22:36:31.906 -05:00 [INF] Executed action FitHub.Controllers.HomeController.History (FitHub) in 2.3238000000000003ms
+2018-08-01 22:36:31.906 -05:00 [INF] Request finished in 2.8426ms 200 text/html; charset=utf-8
+2018-08-01 22:36:33.487 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/History application/x-www-form-urlencoded 41
+2018-08-01 22:36:33.487 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:33.487 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:33.488 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.History (FitHub) with arguments (["07/25/2018"]) - ModelState is "Valid"
+2018-08-01 22:36:33.488 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:33.488 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[WoId], [w].[WoDate], [w].[WoExID], [w].[WoRepCount], [w].[WoSetCount], [w].[WoUserID], [w].[WoWeightUsed]
+FROM [Workouts] AS [w]
+2018-08-01 22:36:33.489 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[WoDate]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserID_0
+2018-08-01 22:36:33.490 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserId_0='?' (Size = 450), @__Parse_1='?' (DbType = Date)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoSetCount], [p].[WoRepCount], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE ([p].[WoUserID] = @__currentUserId_0) AND ([p].[WoDate] = @__Parse_1)
+2018-08-01 22:36:33.490 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/History.cshtml.
+2018-08-01 22:36:33.491 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__exerciseID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExID] = @__exerciseID_0
+2018-08-01 22:36:33.491 -05:00 [INF] Executed action FitHub.Controllers.HomeController.History (FitHub) in 3.6635ms
+2018-08-01 22:36:33.491 -05:00 [INF] Request finished in 4.3636ms 200 text/html; charset=utf-8
+2018-08-01 22:36:34.083 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Index  
+2018-08-01 22:36:34.083 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:34.083 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:34.084 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:34.084 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:36:34.084 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 0.50950000000000006ms
+2018-08-01 22:36:34.084 -05:00 [INF] Request finished in 1.1791ms 200 text/html; charset=utf-8
+2018-08-01 22:36:34.909 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 22:36:34.909 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:34.912 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:34.912 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:34.915 -05:00 [INF] Database GET request yal gawwad!!!
+2018-08-01 22:36:34.949 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:34.950 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Sit-Up
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Bench Press
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Squat
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Deadlift
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Pull Down
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Crunches
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Tricep Extensions
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Tricep Pushdown
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Dips
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Dumbell Flyes
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Incline Dumbell Flyes
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Chest Press
+2018-08-01 22:36:34.950 -05:00 [INF] Exercise logged: Romanian Deadlift
+2018-08-01 22:36:34.950 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+2018-08-01 22:36:35.041 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 22:36:35.050 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 137.5169ms
+2018-08-01 22:36:35.050 -05:00 [INF] Request finished in 140.891ms 200 text/html; charset=utf-8
+2018-08-01 22:36:35.906 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Index  
+2018-08-01 22:36:35.906 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:35.906 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:35.906 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:35.906 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:36:35.907 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 0.6477ms
+2018-08-01 22:36:35.907 -05:00 [INF] Request finished in 1.2416ms 200 text/html; charset=utf-8
+2018-08-01 22:36:37.071 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Debug  
+2018-08-01 22:36:37.071 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:37.071 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Debug (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:37.072 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:37.072 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoRepCount], [p].[WoSetCount], [p].[WoUserID], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserId_0
+2018-08-01 22:36:37.074 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserId_0='?' (Size = 450), @__Parse_1='?' (DbType = Date)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoSetCount], [p].[WoRepCount], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE ([p].[WoUserID] = @__currentUserId_0) AND ([p].[WoDate] = @__Parse_1)
+2018-08-01 22:36:37.074 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Debug.cshtml.
+2018-08-01 22:36:37.075 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__currentUserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[WoId], [p].[WoDate], [p].[WoExID], [p].[WoRepCount], [p].[WoSetCount], [p].[WoUserID], [p].[WoWeightUsed]
+FROM [Workouts] AS [p]
+WHERE [p].[WoUserID] = @__currentUserId_0
+2018-08-01 22:36:37.075 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Debug (FitHub) in 3.7822ms
+2018-08-01 22:36:37.075 -05:00 [INF] Request finished in 4.3389ms 200 text/html; charset=utf-8
+2018-08-01 22:36:38.990 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Index  
+2018-08-01 22:36:38.991 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:38.991 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:38.991 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:38.991 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:36:38.991 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 0.5139ms
+2018-08-01 22:36:38.991 -05:00 [INF] Request finished in 1.1345ms 200 text/html; charset=utf-8
+2018-08-01 22:36:39.853 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 22:36:39.853 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:36:39.853 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:36:39.853 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:36:39.853 -05:00 [INF] Database GET request yal gawwad!!!
+2018-08-01 22:36:39.854 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:36:39.854 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+2018-08-01 22:36:39.854 -05:00 [INF] Exercise logged: Sit-Up
+2018-08-01 22:36:39.854 -05:00 [INF] Exercise logged: Bench Press
+2018-08-01 22:36:39.854 -05:00 [INF] Exercise logged: Squat
+2018-08-01 22:36:39.854 -05:00 [INF] Exercise logged: Deadlift
+2018-08-01 22:36:39.855 -05:00 [INF] Exercise logged: Pull Down
+2018-08-01 22:36:39.855 -05:00 [INF] Exercise logged: Crunches
+2018-08-01 22:36:39.855 -05:00 [INF] Exercise logged: Tricep Extensions
+2018-08-01 22:36:39.855 -05:00 [INF] Exercise logged: Tricep Pushdown
+2018-08-01 22:36:39.855 -05:00 [INF] Exercise logged: Dips
+2018-08-01 22:36:39.855 -05:00 [INF] Exercise logged: Dumbell Flyes
+2018-08-01 22:36:39.855 -05:00 [INF] Exercise logged: Incline Dumbell Flyes
+2018-08-01 22:36:39.855 -05:00 [INF] Exercise logged: Chest Press
+2018-08-01 22:36:39.855 -05:00 [INF] Exercise logged: Romanian Deadlift
+2018-08-01 22:36:39.855 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+2018-08-01 22:36:39.855 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 22:36:39.856 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.6215ms
+2018-08-01 22:36:39.856 -05:00 [INF] Request finished in 3.2586ms 200 text/html; charset=utf-8
+2018-08-01 22:53:52.940 -05:00 [INF] trying to start host
+2018-08-01 22:53:53.224 -05:00 [INF] User profile is available. Using 'C:\Users\hqudah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-01 22:53:53.541 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/  
+2018-08-01 22:53:53.683 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:53:53.740 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:53:53.747 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:53:55.324 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:53:55.827 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 2088.7465ms
+2018-08-01 22:53:55.832 -05:00 [INF] Request finished in 2294.4971ms 200 text/html; charset=utf-8
+2018-08-01 22:54:21.277 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 22:54:21.278 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:54:21.283 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:54:21.284 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:54:21.920 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:54:22.312 -05:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 22:54:22.596 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 22:54:22.608 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1325.0707ms
+2018-08-01 22:54:22.611 -05:00 [INF] Request finished in 1333.4411ms 200 text/html; charset=utf-8
+2018-08-01 22:54:31.882 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Index  
+2018-08-01 22:54:31.883 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:54:31.883 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:54:31.883 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:54:31.883 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:54:31.883 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 0.5139ms
+2018-08-01 22:54:31.883 -05:00 [INF] Request finished in 1.1471ms 200 text/html; charset=utf-8
+2018-08-01 22:54:33.543 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 22:54:33.543 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:54:33.543 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:54:33.543 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:54:33.545 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:54:33.553 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 22:54:33.553 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 22:54:33.554 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 10.5687ms
+2018-08-01 22:54:33.554 -05:00 [INF] Request finished in 11.2615ms 200 text/html; charset=utf-8
+2018-08-01 22:56:27.472 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 22:56:27.472 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:56:27.473 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:56:27.473 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:56:27.473 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:56:27.474 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 22:56:27.564 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 22:56:27.575 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 102.21950000000001ms
+2018-08-01 22:56:27.575 -05:00 [INF] Request finished in 103.2057ms 200 text/html; charset=utf-8
+2018-08-01 22:56:27.850 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/favicon.ico  
+2018-08-01 22:56:27.851 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:56:27.853 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\hqudah\source\repos\FitHub\FitHub\wwwroot\favicon.ico'
+2018-08-01 22:56:27.855 -05:00 [INF] Request finished in 5.0821ms 200 image/x-icon
+2018-08-01 22:56:36.022 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 22:56:36.023 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:56:36.023 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:56:36.023 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:56:36.023 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:56:36.023 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 22:56:36.024 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 22:56:36.024 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.1665ms
+2018-08-01 22:56:36.024 -05:00 [INF] Request finished in 1.6087ms 200 text/html; charset=utf-8
+2018-08-01 22:56:36.112 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/favicon.ico  
+2018-08-01 22:56:36.113 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:56:36.113 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\hqudah\source\repos\FitHub\FitHub\wwwroot\favicon.ico'
+2018-08-01 22:56:36.118 -05:00 [INF] Request finished in 5.661ms 200 image/x-icon
+2018-08-01 22:56:53.217 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Index  
+2018-08-01 22:56:53.218 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:56:53.218 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:56:53.218 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:56:53.218 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 22:56:53.219 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 0.7015ms
+2018-08-01 22:56:53.219 -05:00 [INF] Request finished in 1.5738ms 200 text/html; charset=utf-8
+2018-08-01 22:58:37.089 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 22:58:37.090 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:58:37.090 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:58:37.090 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:58:37.090 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:58:37.091 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 22:58:37.180 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 22:58:37.190 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 99.6503ms
+2018-08-01 22:58:37.190 -05:00 [INF] Request finished in 100.46ms 200 text/html; charset=utf-8
+2018-08-01 22:59:30.084 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 22:59:30.085 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:59:30.085 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 22:59:30.085 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 22:59:30.085 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:59:30.086 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 22:59:30.188 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 22:59:30.198 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 113.12570000000001ms
+2018-08-01 22:59:30.198 -05:00 [INF] Request finished in 113.7458ms 200 text/html; charset=utf-8
+2018-08-01 22:59:30.471 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/favicon.ico  
+2018-08-01 22:59:30.472 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:59:30.472 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\hqudah\source\repos\FitHub\FitHub\wwwroot\favicon.ico'
+2018-08-01 22:59:30.472 -05:00 [INF] Request finished in 0.9372ms 200 image/x-icon
+2018-08-01 22:59:31.373 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 0
+2018-08-01 22:59:31.374 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 22:59:31.402 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments ([""]) - ModelState is "Valid"
+2018-08-01 22:59:31.404 -05:00 [INF] trying to add: 
+2018-08-01 22:59:31.406 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 22:59:31.587 -05:00 [ERR] Failed executing DbCommand (40ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Exercises] ([ExMgID], [ExName])
+VALUES (@p0, @p1);
+SELECT [ExID]
+FROM [Exercises]
+WHERE @@ROWCOUNT = 1 AND [ExID] = scope_identity();
+System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Exercises_MuscleGroups_ExMgID". The conflict occurred in database "FitHubUsers", table "dbo.MuscleGroups", column 'MgId'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:7210594b-75d8-47b5-a8c0-e9b86a7b9017
+Error Number:547,State:0,Class:16
+2018-08-01 22:59:31.620 -05:00 [ERR] An exception occurred in the database while saving changes for context type 'FitHub.Contexts.CustomIdentityContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Exercises_MuscleGroups_ExMgID". The conflict occurred in database "FitHubUsers", table "dbo.MuscleGroups", column 'MgId'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Exercises_MuscleGroups_ExMgID". The conflict occurred in database "FitHubUsers", table "dbo.MuscleGroups", column 'MgId'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2018-08-01 22:59:31.626 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 241.5813ms
+2018-08-01 22:59:31.627 -05:00 [ERR] An unhandled exception has occurred while executing the request
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Exercises_MuscleGroups_ExMgID". The conflict occurred in database "FitHubUsers", table "dbo.MuscleGroups", column 'MgId'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at FitHub.Data.Repositories.ExerciseRepository.AddExercise(String exerciseName) in C:\Users\hqudah\source\repos\FitHub\FitHub\Data\Repositories\ExerciseRepository.cs:line 27
+   at FitHub.Controllers.HomeController.Exercises(String exerciseName) in C:\Users\hqudah\source\repos\FitHub\FitHub\Controllers\HomeController.cs:line 112
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-08-01 22:59:31.749 -05:00 [INF] Request finished in 375.3809ms 500 text/html; charset=utf-8
+2018-08-01 23:00:54.542 -05:00 [INF] trying to start host
+2018-08-01 23:00:54.831 -05:00 [INF] User profile is available. Using 'C:\Users\hqudah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-01 23:00:55.084 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:00:55.240 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:00:55.297 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:00:55.303 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:00:56.042 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:00:56.496 -05:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:00:58.465 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:00:58.668 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 3373.0629000000004ms
+2018-08-01 23:00:58.674 -05:00 [INF] Request finished in 3592.9031ms 200 text/html; charset=utf-8
+2018-08-01 23:03:41.228 -05:00 [INF] trying to start host
+2018-08-01 23:03:41.516 -05:00 [INF] User profile is available. Using 'C:\Users\hqudah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-01 23:03:41.938 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:03:42.071 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:03:42.129 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:03:42.135 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:03:42.744 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:03:43.149 -05:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:03:45.033 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:03:45.235 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 3108.2912ms
+2018-08-01 23:03:45.241 -05:00 [INF] Request finished in 3306.1136ms 200 text/html; charset=utf-8
+2018-08-01 23:04:08.699 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:04:08.700 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:04:08.701 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:04:08.701 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:04:08.704 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:04:08.712 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:04:08.852 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:04:08.862 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 161.6652ms
+2018-08-01 23:04:08.862 -05:00 [INF] Request finished in 163.7312ms 200 text/html; charset=utf-8
+2018-08-01 23:04:14.165 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:04:14.165 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:04:14.166 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:04:14.166 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:04:14.166 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:04:14.166 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:04:14.246 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:04:14.256 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 90.781900000000007ms
+2018-08-01 23:04:14.256 -05:00 [INF] Request finished in 91.5344ms 200 text/html; charset=utf-8
+2018-08-01 23:04:14.341 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/favicon.ico  
+2018-08-01 23:04:14.341 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:04:14.344 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\hqudah\source\repos\FitHub\FitHub\wwwroot\favicon.ico'
+2018-08-01 23:04:14.345 -05:00 [INF] Request finished in 4.2225ms 200 image/x-icon
+2018-08-01 23:04:14.606 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:04:14.606 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:04:14.607 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:04:14.607 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:04:14.607 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:04:14.607 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:04:14.607 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:04:14.608 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.2111ms
+2018-08-01 23:04:14.608 -05:00 [INF] Request finished in 1.7018ms 200 text/html; charset=utf-8
+2018-08-01 23:04:14.686 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/favicon.ico  
+2018-08-01 23:04:14.686 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:04:14.687 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\hqudah\source\repos\FitHub\FitHub\wwwroot\favicon.ico'
+2018-08-01 23:04:14.694 -05:00 [INF] Request finished in 7.5025ms 200 image/x-icon
+2018-08-01 23:04:15.589 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 0
+2018-08-01 23:04:15.590 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:04:15.617 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments ([""]) - ModelState is "Valid"
+2018-08-01 23:04:15.618 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:04:15.618 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:04:15.619 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:04:15.619 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 17.5912ms
+2018-08-01 23:04:15.619 -05:00 [INF] Request finished in 30.0038ms 200 text/html; charset=utf-8
+2018-08-01 23:04:16.764 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 0
+2018-08-01 23:04:16.764 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:04:16.765 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments ([""]) - ModelState is "Valid"
+2018-08-01 23:04:16.765 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:04:16.766 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:04:16.766 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:04:16.766 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.8225ms
+2018-08-01 23:04:16.766 -05:00 [INF] Request finished in 2.3103ms 200 text/html; charset=utf-8
+2018-08-01 23:04:17.805 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 0
+2018-08-01 23:04:17.806 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:04:17.806 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments ([""]) - ModelState is "Valid"
+2018-08-01 23:04:17.806 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:04:17.807 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:04:17.807 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:04:17.807 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.4492ms
+2018-08-01 23:04:17.807 -05:00 [INF] Request finished in 2.0518ms 200 text/html; charset=utf-8
+2018-08-01 23:04:37.948 -05:00 [INF] trying to start host
+2018-08-01 23:04:38.254 -05:00 [INF] User profile is available. Using 'C:\Users\hqudah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-01 23:04:38.456 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:04:38.592 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:04:38.648 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:04:38.654 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:04:39.281 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:04:39.723 -05:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:04:41.656 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:04:41.858 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 3212.3711000000003ms
+2018-08-01 23:04:41.864 -05:00 [INF] Request finished in 3412.2585ms 200 text/html; charset=utf-8
+2018-08-01 23:05:04.457 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:05:04.461 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:05:04.685 -05:00 [INF] Executed DbCommand (53ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2018-08-01 23:05:04.831 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2018-08-01 23:05:04.876 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2018-08-01 23:05:04.877 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:05:04.878 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:05:04.878 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:05:04.881 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:05:04.970 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:05:04.992 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 113.86840000000001ms
+2018-08-01 23:05:04.992 -05:00 [INF] Request finished in 534.8174ms 200 text/html; charset=utf-8
+2018-08-01 23:05:05.286 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/favicon.ico  
+2018-08-01 23:05:05.286 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:05:05.290 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\hqudah\source\repos\FitHub\FitHub\wwwroot\favicon.ico'
+2018-08-01 23:05:05.294 -05:00 [INF] Request finished in 7.8215ms 200 image/x-icon
+2018-08-01 23:05:07.163 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 0
+2018-08-01 23:05:07.163 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:05:07.199 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["0"]) - ModelState is "Valid"
+2018-08-01 23:05:07.200 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:05:07.200 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:05:07.201 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:05:07.201 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 20.2128ms
+2018-08-01 23:05:07.201 -05:00 [INF] Request finished in 38.5531ms 200 text/html; charset=utf-8
+2018-08-01 23:05:08.557 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 0
+2018-08-01 23:05:08.557 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:05:08.558 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["0"]) - ModelState is "Valid"
+2018-08-01 23:05:08.558 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:05:08.558 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:05:08.559 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:05:08.559 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.6019ms
+2018-08-01 23:05:08.559 -05:00 [INF] Request finished in 2.1696ms 200 text/html; charset=utf-8
+2018-08-01 23:05:09.613 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 0
+2018-08-01 23:05:09.613 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:05:09.613 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["0"]) - ModelState is "Valid"
+2018-08-01 23:05:09.613 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:05:09.614 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:05:09.614 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:05:09.614 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.2077ms
+2018-08-01 23:05:09.614 -05:00 [INF] Request finished in 1.6974ms 200 text/html; charset=utf-8
+2018-08-01 23:06:48.256 -05:00 [INF] trying to start host
+2018-08-01 23:06:48.534 -05:00 [INF] User profile is available. Using 'C:\Users\hqudah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-01 23:06:48.962 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:06:49.099 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:06:49.155 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:06:49.162 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:06:49.803 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:06:50.206 -05:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:06:52.101 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:06:52.345 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 3191.3898000000004ms
+2018-08-01 23:06:52.351 -05:00 [INF] Request finished in 3392.2129ms 200 text/html; charset=utf-8
+2018-08-01 23:06:53.611 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 0
+2018-08-01 23:06:53.612 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:06:53.646 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["0"]) - ModelState is "Valid"
+2018-08-01 23:06:53.648 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:06:53.655 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:06:53.655 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:06:53.656 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 29.113100000000003ms
+2018-08-01 23:06:53.656 -05:00 [INF] Request finished in 45.4283ms 200 text/html; charset=utf-8
+2018-08-01 23:06:55.347 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 0
+2018-08-01 23:06:55.348 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:06:55.348 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["0"]) - ModelState is "Valid"
+2018-08-01 23:06:55.349 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:06:55.349 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:06:55.350 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:06:55.350 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.303ms
+2018-08-01 23:06:55.350 -05:00 [INF] Request finished in 2.9115ms 200 text/html; charset=utf-8
+2018-08-01 23:07:32.924 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:07:32.924 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:07:32.925 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:07:32.925 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:07:32.925 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:07:32.925 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:07:33.012 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:07:33.022 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 97.1872ms
+2018-08-01 23:07:33.022 -05:00 [INF] Request finished in 97.9087ms 200 text/html; charset=utf-8
+2018-08-01 23:07:34.669 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:07:34.670 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:07:34.679 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["4"]) - ModelState is "Valid"
+2018-08-01 23:07:34.679 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:07:34.680 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:07:34.680 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:07:34.680 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 10.514800000000001ms
+2018-08-01 23:07:34.681 -05:00 [INF] Request finished in 11.8205ms 200 text/html; charset=utf-8
+2018-08-01 23:07:35.851 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:07:35.852 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:07:35.852 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["7"]) - ModelState is "Valid"
+2018-08-01 23:07:35.853 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:07:35.853 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:07:35.853 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:07:35.854 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.1246ms
+2018-08-01 23:07:35.854 -05:00 [INF] Request finished in 2.8402ms 200 text/html; charset=utf-8
+2018-08-01 23:07:37.104 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:07:37.105 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:07:37.105 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["3"]) - ModelState is "Valid"
+2018-08-01 23:07:37.105 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:07:37.106 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:07:37.106 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:07:37.106 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.3343ms
+2018-08-01 23:07:37.106 -05:00 [INF] Request finished in 1.8889ms 200 text/html; charset=utf-8
+2018-08-01 23:11:54.663 -05:00 [INF] trying to start host
+2018-08-01 23:11:54.953 -05:00 [INF] User profile is available. Using 'C:\Users\hqudah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-01 23:11:55.298 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:11:55.438 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:11:55.497 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:11:55.504 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:11:56.171 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:11:56.573 -05:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:11:58.496 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:11:58.734 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 3238.2872ms
+2018-08-01 23:11:58.739 -05:00 [INF] Request finished in 3444.673ms 200 text/html; charset=utf-8
+2018-08-01 23:12:00.051 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:12:00.052 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:12:00.089 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["3"]) - ModelState is "Valid"
+2018-08-01 23:12:00.090 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:12:00.097 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:12:00.218 -05:00 [INF] Executed DbCommand (35ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:12:00.241 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:12:00.242 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 177.9067ms
+2018-08-01 23:12:00.243 -05:00 [INF] Request finished in 192.3556ms 200 text/html; charset=utf-8
+2018-08-01 23:12:01.678 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:12:01.679 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:12:01.680 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["4"]) - ModelState is "Valid"
+2018-08-01 23:12:01.680 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:12:01.680 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:12:01.684 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:12:01.684 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:12:01.685 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 5.8201ms
+2018-08-01 23:12:01.685 -05:00 [INF] Request finished in 6.4004ms 200 text/html; charset=utf-8
+2018-08-01 23:12:02.744 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:12:02.744 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:12:02.744 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["2"]) - ModelState is "Valid"
+2018-08-01 23:12:02.745 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:12:02.745 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:12:02.746 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:12:02.746 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:12:02.747 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.4358ms
+2018-08-01 23:12:02.747 -05:00 [INF] Request finished in 3.1078ms 200 text/html; charset=utf-8
+2018-08-01 23:12:04.355 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:12:04.355 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:12:04.355 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["2"]) - ModelState is "Valid"
+2018-08-01 23:12:04.356 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:12:04.356 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:12:04.357 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:12:04.357 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:12:04.357 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.9752ms
+2018-08-01 23:12:04.357 -05:00 [INF] Request finished in 2.4528ms 200 text/html; charset=utf-8
+2018-08-01 23:14:42.322 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:14:42.322 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:14:42.323 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["3"]) - ModelState is "Valid"
+2018-08-01 23:14:42.323 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:14:42.324 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:14:42.324 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:14:42.324 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:14:42.325 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.4829000000000003ms
+2018-08-01 23:14:42.325 -05:00 [INF] Request finished in 3.0283ms 200 text/html; charset=utf-8
+2018-08-01 23:16:52.633 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:16:52.634 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:16:52.634 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:16:52.635 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:16:52.635 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:16:52.636 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:16:52.732 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:16:52.743 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 109.3264ms
+2018-08-01 23:16:52.743 -05:00 [INF] Request finished in 110.3286ms 200 text/html; charset=utf-8
+2018-08-01 23:16:54.765 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:16:54.766 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:16:54.766 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["3"]) - ModelState is "Valid"
+2018-08-01 23:16:54.766 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:16:54.767 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:16:54.767 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:16:54.767 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:16:54.768 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.1144000000000003ms
+2018-08-01 23:16:54.768 -05:00 [INF] Request finished in 2.7039ms 200 text/html; charset=utf-8
+2018-08-01 23:17:29.051 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:17:29.051 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:17:29.051 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["2"]) - ModelState is "Valid"
+2018-08-01 23:17:29.051 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:17:29.052 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:17:29.052 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:17:29.052 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:17:29.053 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.8138ms
+2018-08-01 23:17:29.053 -05:00 [INF] Request finished in 2.3093ms 200 text/html; charset=utf-8
+2018-08-01 23:17:30.508 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:17:30.509 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:17:30.509 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["1"]) - ModelState is "Valid"
+2018-08-01 23:17:30.509 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:17:30.510 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:17:30.510 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:17:30.510 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:17:30.511 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.0111ms
+2018-08-01 23:17:30.511 -05:00 [INF] Request finished in 2.5401ms 200 text/html; charset=utf-8
+2018-08-01 23:18:27.425 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Exercises  
+2018-08-01 23:18:27.426 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:18:27.426 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:18:27.427 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:18:27.427 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:18:27.427 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:18:27.428 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:18:27.428 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.6586ms
+2018-08-01 23:18:27.428 -05:00 [INF] Request finished in 2.7801ms 200 text/html; charset=utf-8
+2018-08-01 23:19:59.882 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:19:59.883 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:19:59.883 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["5"]) - ModelState is "Valid"
+2018-08-01 23:19:59.884 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:19:59.884 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:19:59.885 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:19:59.885 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:19:59.886 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.4402ms
+2018-08-01 23:19:59.886 -05:00 [INF] Request finished in 3.2969ms 200 text/html; charset=utf-8
+2018-08-01 23:20:01.839 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:20:01.839 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:20:01.839 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["4"]) - ModelState is "Valid"
+2018-08-01 23:20:01.840 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:20:01.840 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:20:01.841 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:20:01.841 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:20:01.841 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.013ms
+2018-08-01 23:20:01.841 -05:00 [INF] Request finished in 2.5464ms 200 text/html; charset=utf-8
+2018-08-01 23:20:03.238 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:20:03.238 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:20:03.238 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["3"]) - ModelState is "Valid"
+2018-08-01 23:20:03.239 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:20:03.239 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:20:03.240 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:20:03.240 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:20:03.241 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 2.4038ms
+2018-08-01 23:20:03.241 -05:00 [INF] Request finished in 2.9997ms 200 text/html; charset=utf-8
+2018-08-01 23:20:04.438 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:56626/Home/Exercises application/x-www-form-urlencoded 19
+2018-08-01 23:20:04.439 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:20:04.439 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Exercises (FitHub) with arguments (["6"]) - ModelState is "Valid"
+2018-08-01 23:20:04.439 -05:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'CustomIdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=FitHub 
+2018-08-01 23:20:04.440 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MgId], [m].[MgName]
+FROM [MuscleGroups] AS [m]
+2018-08-01 23:20:04.440 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__MgId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ExID], [e].[ExMgID], [e].[ExName]
+FROM [Exercises] AS [e]
+WHERE [e].[ExMgID] = @__MgId_0
+2018-08-01 23:20:04.440 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Exercises.cshtml.
+2018-08-01 23:20:04.441 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Exercises (FitHub) in 1.7677ms
+2018-08-01 23:20:04.441 -05:00 [INF] Request finished in 2.2598ms 200 text/html; charset=utf-8
+2018-08-01 23:20:14.635 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:56626/Home/Index  
+2018-08-01 23:20:14.635 -05:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2018-08-01 23:20:14.637 -05:00 [INF] Authorization was successful for user: hazim.qudah@mavs.uta.edu.
+2018-08-01 23:20:14.637 -05:00 [INF] Executing action method FitHub.Controllers.HomeController.Index (FitHub) with arguments (null) - ModelState is "Valid"
+2018-08-01 23:20:14.717 -05:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2018-08-01 23:20:14.720 -05:00 [INF] Executed action FitHub.Controllers.HomeController.Index (FitHub) in 83.3279ms
+2018-08-01 23:20:14.720 -05:00 [INF] Request finished in 85.5722ms 200 text/html; charset=utf-8

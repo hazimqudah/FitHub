@@ -34,14 +34,21 @@ namespace FitHub
         {
             services.AddScoped<IExerciseRepository, ExerciseRepository>();
             services.AddScoped<IWorkoutRepository, WorkoutRepository>();
+            services.AddScoped<IMuscleGroupRepository, MuscleGroupRepository>();
             services.AddMvc();
 
             if (_environment.IsDevelopment())
             {
                 // Configuring the DbContext used for the Identity database.
-                services.AddDbContext<CustomIdentityContext>(options =>
+                /* services.AddDbContext<CustomIdentityContext>(options =>
                 {
                     options.UseSqlServer(Environment.GetEnvironmentVariable("IdentityConnectionString"),
+                        optionsBuilder => optionsBuilder.MigrationsAssembly("FitHub"));
+                }); */
+
+                services.AddDbContext<CustomIdentityContext>(options =>
+                {
+                    options.UseSqlServer("Server=S34299;Database=FitHubUsers;Trusted_Connection=True;MultipleActiveResultSets=true",
                         optionsBuilder => optionsBuilder.MigrationsAssembly("FitHub"));
                 });
             }

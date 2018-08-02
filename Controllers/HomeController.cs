@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using FitHub.Contexts;
-using FitHub.Data;
 using FitHub.Data.Models;
-using FitHub.Data.Models.FitFile;
 using FitHub.Data.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -20,18 +17,24 @@ namespace FitHub.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly CustomIdentityContext _identityDbContext;
+
         private readonly IExerciseRepository _exerciseRepository;
         private readonly IWorkoutRepository _workoutRepository;
+        private readonly IMuscleGroupRepository _muscleGroupRepository;
+
         public string CurrentUserID;
         private ILogger<HomeController> _logger;
 
 
-        public HomeController(UserManager<IdentityUser> userManager, ILogger<HomeController> logger, CustomIdentityContext _identityContext, IExerciseRepository exerciseRepository, IWorkoutRepository workoutRepository)
+        public HomeController(UserManager<IdentityUser> userManager, ILogger<HomeController> logger, CustomIdentityContext _identityContext, IExerciseRepository exerciseRepository, IWorkoutRepository workoutRepository, IMuscleGroupRepository muscleGroupRepository)
         {
             _userManager = userManager;
             _identityDbContext = _identityContext;
+
             _exerciseRepository = exerciseRepository;
             _workoutRepository = workoutRepository;
+            _muscleGroupRepository = muscleGroupRepository;
+
             _logger = logger;
         }
 
@@ -84,20 +87,9 @@ namespace FitHub.Controllers
                     WoWeightUsed = int.Parse(weights)
                 });
 
-                //finalString += "Exercise: " + ex + " Sets: " + sets + " Reps: " + reps + " Weights: " + weights + "\n";
             }
 
             _workoutRepository.LogWorkoutSet(workoutSet);
-
-            //string modelString = "Date: " + WoDate + " User ID: " + CurrentUserID + "\n\n";
-            //modelString += finalString;
-
-            //model.DateToLog = modelString;
-
-            //model.GetAllWorkoutRows();
-            //model.FindUniqueWorkoutDatesForUser(CurrentUserID);
-            //  model.FindWorkoutsOnSelectedDateForUser(CurrentUserID, SelectedWorkoutDateForUser);
-
             return View(model);
         }
 
@@ -105,27 +97,22 @@ namespace FitHub.Controllers
         [HttpGet]
         public IActionResult Exercises()
         {
-            _logger.LogInformation("Database GET request yal gawwad!!!");
-            ViewBag.method = "GET";
+            var model = new ExercisesViewModel(_identityDbContext, _exerciseRepository, _workoutRepository, _muscleGroupRepository);
 
-            FitFileExercisesModel tempModel = new FitFileExercisesModel(_exerciseRepository);
+            model.GetMuscleGroups();
 
-            foreach (var c in tempModel.Exercises)
-            {
-                _logger.LogInformation("Exercise logged: " + c.ExName);
-            }
-
-            return View(new FitFileExercisesModel(_exerciseRepository));
+            return View(model);
         }
 
         [HttpPost]
-        public IActionResult Exercises(string exerciseName)
+        public IActionResult Exercises(int chosenMuscleGroup)
         {
-            _logger.LogInformation("trying to add: " + exerciseName);
+            var model = new ExercisesViewModel(_identityDbContext, _exerciseRepository, _workoutRepository, _muscleGroupRepository);
 
-            _exerciseRepository.AddExercise(exerciseName);
+            model.GetMuscleGroups();
+            model.GetExercisesForMuscleGroup(Convert.ToInt32(Request.Form["chosenMuscleGroup"]));
 
-            return View(new FitFileExercisesModel(_exerciseRepository));
+            return View(model);
         }
 
         [Authorize]

@@ -1,4 +1,4 @@
-﻿@model FitFileExercisesModel
+﻿@model ExercisesViewModel
 
 @{
     ViewData["Title"] = "Exercises";
@@ -11,33 +11,39 @@
 <div class="container">
     <h1 class="h4 mb-3 font-weight-normal text-center">Exercise List</h1>
 
-    <div class="form-group">
-        <select class="form-control" id="sel1">
-            @foreach (var p in Model.Exercises)
+    <form method="post" action="/Home/Exercises">
+        <div class="form-group">
+            <select class="form-control" onchange="this.form.submit()" name="chosenMuscleGroup" id="chosenMuscleGroup">
+                <option disabled selected>Select a muscle group</option>
+                @foreach (var p in Model.MuscleGroups)
+                {
+                    <option value="@p.MgId"> @p.MgName </option>
+                }
+            </select>
+        </div>
+    </form>
+
+    @if (Model.ExercisesForMuscleGroup != null)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Exercise ID</th>
+                    <th scope="col">Exercise Name</th>
+                </tr>
+            </thead>
+
+            @foreach (var x in Model.ExercisesForMuscleGroup)
             {
-                <option> @p.ExName </option>
+                <tbody>
+                <td>@x.ExID</td>
+                <td>@x.ExName</td>
+                </tbody>
             }
-        </select>
-    </div>
+        </table>
+    }
+
+
 
     <br />
 </div>
-<div class="container">
-    <h1 class="h4 mb-3 font-weight-normal text-center">Add Exercise to Directory</h1>
-
-    <form action="/FitFile/Exercises" method="post">
-        <div class="form-group">
-            <input type="text" autocomplete="off" class="form-control" name="exerciseName" placeholder="Exercise Name" />
-        </div>
-
-        <div class="form-group text-center">
-            <button type="submit" class="btn btn-success">Submit</button>
-        </div>
-
-    </form>
-</div>
-
-
-
-
-

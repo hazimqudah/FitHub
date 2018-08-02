@@ -4,14 +4,16 @@ using FitHub.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FitHub.Migrations
 {
     [DbContext(typeof(CustomIdentityContext))]
-    partial class CustomIdentityContextModelSnapshot : ModelSnapshot
+    [Migration("20180802030806_AddMGToExerciseTable")]
+    partial class AddMGToExerciseTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,8 +33,6 @@ namespace FitHub.Migrations
                         .HasMaxLength(50);
 
                     b.HasKey("ExID");
-
-                    b.HasIndex("ExMgID");
 
                     b.ToTable("Exercises");
                 });
@@ -257,14 +257,6 @@ namespace FitHub.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("FitHub.Data.Entities.Exercise", b =>
-                {
-                    b.HasOne("FitHub.Data.Entities.MuscleGroup", "MuscleGroup")
-                        .WithMany()
-                        .HasForeignKey("ExMgID")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("FitHub.Data.Entities.Workout", b =>
